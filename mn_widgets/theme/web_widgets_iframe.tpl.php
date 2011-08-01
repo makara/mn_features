@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: web_widgets_iframe.tpl.php,v 1.1.2.1 2010/09/12 19:51:58 alexb Exp $
 /**
  * @file
  * Template for the code what to embed in external sites
@@ -15,4 +15,4 @@ widgetContext = <?php print $js_variables ?>;
 </script>
 <div id="<?php print $wid ?>"></div>
 <script src="<?php print $script_url ?>"></script>
-<div style="font-size: 10px;"><?php print $site_link ?></div></div>
+<div style="font-size: 10px;"><?php print $site_link ?>.</div></div>

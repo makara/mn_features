@@ -67,17 +67,9 @@ function mn_world_disable() {
 /**
  * Implementation of hook_mn_openlayers_map_alter().
  */
-function mn_world_openlayers_map_preprocess_alter(&$map) {
+function mn_world_openlayers_map_alter(&$map) {
   // Ensure that default map preset has interface icons in the admin pages.
   if(empty($map['image_path'])) {
     $map['image_path'] = 'http://js.mapbox.com/theme/dark/';
-  }
-  // Change the map for print views.
-  if ($_GET['print']) {
-    // Disable the layerswitcher
-    unset($map['behaviors']['openlayers_behavior_layerswitcher']);
-    // Switch to world print.
-    $map['layers']['world_print'] =
-    $map['default_layer'] = 'world_print';
   }
 }

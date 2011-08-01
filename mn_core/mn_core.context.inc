@@ -297,6 +297,12 @@ function mn_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'boxes-mn_latest_news' => array(
+          'module' => 'boxes',
+          'delta' => 'mn_latest_news',
+          'region' => 'right',
+          'weight' => 0,
+        ),
         'boxes-mn_welcome' => array(
           'module' => 'boxes',
           'delta' => 'mn_welcome',
@@ -308,12 +314,6 @@ function mn_core_context_default_contexts() {
           'delta' => 'mn_latest_news_map',
           'region' => 'content',
           'weight' => 1,
-        ),
-        'boxes-mn_latest_news' => array(
-          'module' => 'boxes',
-          'delta' => 'mn_latest_news',
-          'region' => 'right',
-          'weight' => 0,
         ),
       ),
     ),

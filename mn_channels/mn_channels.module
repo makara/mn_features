@@ -36,7 +36,7 @@ function mn_channels_enable() {
     $node->body = "You can collect news into a channel. Users can read this channel and subscribe to it. This is an example channel. Rename it for your purposes or remove it if you don't need it.";
 
     $example_term = array(
-      'vid' => 1,
+      'vid' => 2, // Refers to default vid for the "Channel tags" vocabulary.
       'name' => 'example tag',
     );
     taxonomy_save_term($example_term);

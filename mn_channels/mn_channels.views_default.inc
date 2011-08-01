@@ -2945,7 +2945,6 @@ function mn_channels_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('items_per_page', 30);
   $handler->override_option('style_plugin', 'openlayers_data');
   $handler->override_option('style_options', array(
     'grouping' => 'name',
@@ -2968,6 +2967,56 @@ function mn_channels_views_default_views() {
   $handler->override_option('displays', array());
   $handler = $view->new_display('block', 'Block: News in channel', 'block_3');
   $handler->override_option('fields', array(
+    'nid' => array(
+      'label' => 'Feed nid',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'strip_tags' => 0,
+        'html' => 0,
+      ),
+      'link_to_node' => 0,
+      'exclude' => 1,
+      'id' => 'nid',
+      'table' => 'node',
+      'field' => 'nid',
+      'relationship' => 'feed_nid',
+    ),
+    'config' => array(
+      'label' => 'Source',
+      'alter' => array(
+        'alter_text' => FALSE,
+        'text' => '',
+        'make_link' => FALSE,
+        'path' => '',
+        'alt' => '',
+        'link_class' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'trim' => FALSE,
+        'max_length' => '',
+        'word_boundary' => TRUE,
+        'ellipsis' => TRUE,
+        'strip_tags' => FALSE,
+        'html' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'config',
+      'table' => 'feeds_source',
+      'field' => 'config',
+      'relationship' => 'feed_nid',
+    ),
     'url' => array(
       'label' => 'URL',
       'alter' => array(
@@ -3388,13 +3437,11 @@ function mn_channels_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('title', 'KML Export');
   $handler->override_option('items_per_page', 50);
   $handler->override_option('style_plugin', 'kml_feed');
   $handler->override_option('style_options', array(
     'mission_description' => FALSE,
     'description' => '',
-    'filename' => 'export',
     'fields' => array(
       'name' => 'title',
       'description' => 'description',
@@ -3403,7 +3450,7 @@ function mn_channels_views_default_views() {
     ),
   ));
   $handler->override_option('row_plugin', '');
-  $handler->override_option('path', 'channel/%/export.kml');
+  $handler->override_option('path', 'channel/%/news.kml');
   $handler->override_option('menu', array(
     'type' => 'none',
     'title' => '',
@@ -3425,7 +3472,7 @@ function mn_channels_views_default_views() {
     'block_2' => 0,
     'block_3' => 0,
   ));
-  $handler->override_option('sitename_title', 0);
+  $handler->override_option('sitename_title', FALSE);
 
   $views[$view->name] = $view;
 

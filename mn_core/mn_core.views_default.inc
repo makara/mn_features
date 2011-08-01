@@ -721,7 +721,7 @@ function mn_core_views_default_views() {
     'grouping' => 'timestamp',
     'type' => 'ul',
   ));
-  $handler = $view->new_display('page', 'Page: Feeds', 'page_1');
+  $handler = $view->new_display('page', 'Page: News', 'page_1');
   $handler->override_option('filters', array(
     'timestamp' => array(
       'operator' => 'between',
@@ -773,7 +773,7 @@ function mn_core_views_default_views() {
     'type' => 'normal',
     'title' => 'Feeds',
     'description' => '',
-    'weight' => '-3',
+    'weight' => '0',
     'name' => 'features',
   ));
   $handler->override_option('tab_options', array(
@@ -2331,7 +2331,7 @@ function mn_core_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('items_per_page', 50);
+  $handler->override_option('items_per_page', 100);
   $handler->override_option('distinct', 0);
   $handler->override_option('style_plugin', 'openlayers_data');
   $handler->override_option('style_options', array(
@@ -3079,6 +3079,56 @@ function mn_core_views_default_views() {
   $handler->override_option('mode_name', 'Trash');
   $handler = $view->new_display('block', 'Block: News', 'block_3');
   $handler->override_option('fields', array(
+    'config' => array(
+      'label' => 'Source',
+      'alter' => array(
+        'alter_text' => FALSE,
+        'text' => '',
+        'make_link' => FALSE,
+        'path' => '',
+        'alt' => '',
+        'link_class' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'trim' => FALSE,
+        'max_length' => '',
+        'word_boundary' => TRUE,
+        'ellipsis' => TRUE,
+        'strip_tags' => FALSE,
+        'html' => FALSE,
+      ),
+      'exclude' => 1,
+      'id' => 'config',
+      'table' => 'feeds_source',
+      'field' => 'config',
+      'relationship' => 'feed_nid',
+    ),
+    'nid' => array(
+      'label' => 'Feed nid',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'strip_tags' => 0,
+        'html' => 0,
+      ),
+      'link_to_node' => 0,
+      'exclude' => 1,
+      'id' => 'nid',
+      'table' => 'node',
+      'field' => 'nid',
+      'relationship' => 'feed_nid',
+    ),
     'url' => array(
       'label' => 'URL',
       'alter' => array(
@@ -3135,13 +3185,13 @@ function mn_core_views_default_views() {
         'button' => 'Override',
       ),
     ),
-    'timestamp_1' => array(
+    'title' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
-        'make_link' => 0,
-        'path' => '',
+        'make_link' => 1,
+        'path' => '[url]',
         'link_class' => '',
         'alt' => '',
         'prefix' => '',
@@ -3154,15 +3204,10 @@ function mn_core_views_default_views() {
         'strip_tags' => 0,
         'html' => 0,
       ),
-      'date_format' => 'custom',
-      'custom_date_format' => 'g:ia',
       'exclude' => 0,
-      'id' => 'timestamp_1',
+      'id' => 'title',
       'table' => 'feeds_data_syndication',
-      'field' => 'timestamp',
-      'override' => array(
-        'button' => 'Override',
-      ),
+      'field' => 'title',
       'relationship' => 'none',
     ),
     'title_1' => array(
@@ -3194,13 +3239,13 @@ function mn_core_views_default_views() {
         'button' => 'Override',
       ),
     ),
-    'title' => array(
+    'timestamp_1' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
-        'make_link' => 1,
-        'path' => '[url]',
+        'make_link' => 0,
+        'path' => '',
         'link_class' => '',
         'alt' => '',
         'prefix' => '',
@@ -3213,10 +3258,15 @@ function mn_core_views_default_views() {
         'strip_tags' => 0,
         'html' => 0,
       ),
+      'date_format' => 'custom',
+      'custom_date_format' => 'g:ia',
       'exclude' => 0,
-      'id' => 'title',
+      'id' => 'timestamp_1',
       'table' => 'feeds_data_syndication',
-      'field' => 'title',
+      'field' => 'timestamp',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
   ));
@@ -3500,13 +3550,11 @@ function mn_core_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('title', 'KML Export');
   $handler->override_option('items_per_page', 50);
   $handler->override_option('style_plugin', 'kml_feed');
   $handler->override_option('style_options', array(
     'mission_description' => FALSE,
     'description' => '',
-    'filename' => 'export',
     'fields' => array(
       'name' => 'title',
       'description' => 'description',
@@ -3515,7 +3563,7 @@ function mn_core_views_default_views() {
     ),
   ));
   $handler->override_option('row_plugin', '');
-  $handler->override_option('path', 'kml/%/export.kml');
+  $handler->override_option('path', 'kml/%/news.kml');
   $handler->override_option('menu', array(
     'type' => 'none',
     'title' => '',
@@ -3538,7 +3586,7 @@ function mn_core_views_default_views() {
     'block_2' => 0,
     'block_3' => 0,
   ));
-  $handler->override_option('sitename_title', 0);
+  $handler->override_option('sitename_title', FALSE);
 
   $views[$view->name] = $view;
 

@@ -107,9 +107,6 @@ function mn_core_form_alter(&$form, $form_state, $form_id) {
     );
     $form['title']['title'] = $title;
 
-    // Remove preview button on feed node form.
-    unset($form['buttons']['preview']);
-
     // Prepopulate the Feed URL field from the 'url' GET variable used by the
     // bookmarklet.
     if (!empty($_GET['source']) && valid_url($_GET['source'], TRUE)) {
@@ -171,7 +168,7 @@ function mn_core_openlayers_alter() {
  * Implementation of hook_imagecache_default_presets().
  */
 function mn_core_imagecache_default_presets_alter($default_presets) {
-  $default_presets['designkit-image-wallpaper'] = array();
+  $default_presets['designkit-image-wallpaper']['actions'] = array();
 }
 
 /**
@@ -190,24 +187,6 @@ function mn_core_form_spaces_dashboard_editor_alter(&$form, $form_state) {
   // pages.
   if ($dashboard = context_get('spaces', 'dashboard')) {
     unset($form['contexts'][$dashboard]['reaction-block']['layout']);
-  }
-}
-
-/**
- * Preprocessor for theme_context_block_editable_region().
- */
-function mn_core_preprocess_context_block_editable_region(&$vars) {
-  if (in_array($vars['region'], array('page_title', 'palette', 'page_tools', 'header'))) {
-    $vars['editable'] = FALSE;
-  }
-}
-
-/**
- * Preprocessor for theme('context_block_browser').
- */
-function mn_core_preprocess_context_block_browser(&$vars) {
-  if (count($vars['categories']['#options']) == 2) {
-    unset($vars['categories']['#options'][0]);
   }
 }
 
@@ -241,6 +220,16 @@ function mn_core_context_default_contexts_alter(&$contexts) {
  */
 function mn_core_openlayers_behaviors() {
   return array(
+    'mn_core_behavior_layerswitcherplus' => array(
+      'title' => t('MN LayerSwitcherPlus'),
+      'type' => 'layer',
+      'behavior' => array(
+        'class' => 'mn_core_behavior_layerswitcherplus',
+        'parent' => 'openlayers_behavior',
+        'path' => drupal_get_path('module', 'mn_core') .'/behaviors',
+        'file' => 'mn_core_behavior_layerswitcherplus.inc',
+      ),
+    ),
     'mn_core_behavior_popup' => array(
       'title' => t('MN custom popup'),
       'type' => 'layer',

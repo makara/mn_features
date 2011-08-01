@@ -66,6 +66,15 @@ function mn_widgets_block($op = 'list', $delta = 0) {
  * Adds relevent stylesheets.
  */
 function mn_widgets_web_widgets_render_widget() {
+  global $theme;
+  if ($theme == 'jake') {
+    drupal_add_css(drupal_get_path('module', 'system') . '/defaults.css', 'widget');
+    drupal_add_css(drupal_get_path('theme', 'tao') . '/reset.css', 'widget');
+    drupal_add_css(drupal_get_path('theme', 'rubik') . '/core.css', 'widget');
+    drupal_add_css(drupal_get_path('theme', 'jake') . '/css/openlayers.css', 'widget');
+    drupal_add_css(drupal_get_path('theme', 'jake') . '/css/feeditem_lists.css', 'widget');
+    drupal_add_css(drupal_get_path('theme', 'jake') . '/css/designkit_defaults.css', 'widget');
+  }
   drupal_add_css(drupal_get_path('module', 'mn_widgets') . '/mn_widgets.css', 'widget');
 }
 
@@ -102,10 +111,7 @@ function mn_widgets_theme_registry_alter(&$theme_registry) {
  * Preprocessor for theme('web_widgets_iframe').
  */
 function template_preprocess_mn_widgets_web_widgets_iframe(&$vars) {
-  $vars['site_link'] = t('More news from <a href="@site_url">@site_name</a>.', array(
-    '@site_url' => url('', array('absolute' => TRUE, 'purl' => array('disabled' => TRUE))),
-    '@site_name' => variable_get('site_name', 'Drupal'),
-  ));
-  $vars['site_name'] = t('from @site_name', array('@site_name' => variable_get('site_name', 'Drupal')));
+  $vars['site_link'] = t('More news from') . ' ' . l(variable_get('site_name', 'Drupal'), '', array('absolute' => TRUE, 'purl' => array('disabled' => TRUE), 'attributes' => array('style' => 'color:#000;')));
+  $vars['site_name'] = t('from') . ' ' . variable_get('site_name', 'Drupal');
   $vars['title'] = l(drupal_get_title(), $_GET['q'], array('absolute' => TRUE, 'attributes' => array('style' => 'color:#fff;text-decoration:none;')));
 }

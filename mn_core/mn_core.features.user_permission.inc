@@ -6,6 +6,31 @@
 function mn_core_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: access administration pages
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: access site reports
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: access user profiles
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
   // Exported permission: administer blocks
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
@@ -22,9 +47,25 @@ function mn_core_user_default_permissions() {
     ),
   );
 
+  // Exported permission: administer features
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
   // Exported permission: administer feeds
   $permissions['administer feeds'] = array(
     'name' => 'administer feeds',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: administer filters
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
     'roles' => array(
       '0' => 'admin',
     ),
@@ -41,6 +82,14 @@ function mn_core_user_default_permissions() {
   // Exported permission: administer permissions
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: administer search
+  $permissions['administer search'] = array(
+    'name' => 'administer search',
     'roles' => array(
       '0' => 'admin',
     ),
@@ -67,6 +116,7 @@ function mn_core_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'authenticated user',
     ),
   );
 
@@ -161,6 +211,14 @@ function mn_core_user_default_permissions() {
     ),
   );
 
+  // Exported permission: manage features
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
   // Exported permission: manage stored views
   $permissions['manage stored views'] = array(
     'name' => 'manage stored views',
@@ -173,6 +231,30 @@ function mn_core_user_default_permissions() {
   // Exported permission: mark items
   $permissions['mark items'] = array(
     'name' => 'mark items',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: search content
+  $permissions['search content'] = array(
+    'name' => 'search content',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: select different theme
+  $permissions['select different theme'] = array(
+    'name' => 'select different theme',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
+  // Exported permission: use advanced search
+  $permissions['use advanced search'] = array(
+    'name' => 'use advanced search',
     'roles' => array(
       '0' => 'admin',
     ),

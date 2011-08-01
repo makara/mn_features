@@ -1,0 +1,62 @@
+.olControlLayerSwitcherPlus {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  font-size: normal;
+  color: #eee;
+  background: url('images/help.png');
+}
+
+.olControlLayerSwitcherPlus .layersDiv {
+  border:0px;
+  padding: 5px 75px 5px 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.olControlLayerSwitcherPlus .baseLbl,
+.olControlLayerSwitcherPlus .dataLbl {
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px 0px 4px;
+  border-bottom: 1px solid #666;
+}
+
+.olControlLayerSwitcherPlus .maximizeDiv,
+.olControlLayerSwitcherPlus .minimizeDiv {
+  top: 5px;
+  right: 0px;
+}
+
+.olControlLayerSwitcherPlus .style_holder {
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #000;
+  width: 60px;
+}
+
+.olControlLayerSwitcherPlus .style_holder .styleDiv {
+  margin: 3px;
+}
+
+.olControlLayerSwitcherPlus .styleDiv {
+  cursor: pointer;
+  width:  12px;
+  height: 12px;
+  float: left;
+  margin: 3px;
+  border-width: 3px;
+}
+
+.olControlLayerSwitcherPlus .layerDiv {
+  clear: both;
+}
+
+.olControlLayerSwitcherPlus .layerDiv input {
+  vertical-align: middle;
+  margin-right: 5px;
+}

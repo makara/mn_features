@@ -250,34 +250,5 @@ function mn_world_openlayers_layers() {
   );
 
   $export['world_light_small'] = $openlayers_layers;
-  $openlayers_layers = new stdClass;
-  $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
-  $openlayers_layers->api_version = 1;
-  $openlayers_layers->name = 'world_print';
-  $openlayers_layers->title = 'World Print';
-  $openlayers_layers->description = 'A printer-friendly world map';
-  $openlayers_layers->data = array(
-    'layername' => 'world-print',
-    'layer_type' => 'openlayers_layer_type_mapbox',
-    'osm' => 0,
-    'baselayer' => 1,
-    'type' => 'png',
-    'resolutions' => array(
-      0 => 78271.51695,
-      1 => 39135.758475,
-      2 => 19567.8792375,
-      3 => 9783.93961875,
-      4 => 4891.969809375,
-      5 => 2445.9849046875,
-      6 => 1222.9924523438,
-      7 => 611.49622617188,
-      8 => 305.74811308594,
-    ),
-    'projection' => array(
-      0 => '900913',
-    ),
-  );
-
-  $export['world_print'] = $openlayers_layers;
   return $export;
 }
