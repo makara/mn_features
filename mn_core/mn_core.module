@@ -374,6 +374,8 @@ function mn_core_block($op = 'list', $delta = 0) {
               'html' => TRUE,
               'query' => $query + array('print' => 1),
             );
+            // Alter.
+            drupal_alter('mn_core_formats', $links, $query);
             $output = theme('links', $links, array('class' => 'links formats'));
             return array('content' => $output);
           }
