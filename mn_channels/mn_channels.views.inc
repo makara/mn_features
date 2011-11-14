@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: mn_channels.views.inc,v 1.1.2.1 2010/09/12 19:49:00 alexb Exp $
 /**
  * @file
  * Views hooks.

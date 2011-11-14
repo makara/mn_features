@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: mn_channels_views_handler_field_item_count.inc,v 1.1.2.1 2010/09/12 19:49:17 alexb Exp $
 /**
  * @file
  * Class defition for data_node_views_handler_field_item_count.

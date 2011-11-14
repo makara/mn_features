@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: web_widgets_iframe.tpl.php,v 1.1.2.2 2010/10/11 22:17:39 diggersf Exp $
 /**
  * @file
  * Template for the code what to embed in external sites
