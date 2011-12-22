@@ -11,10 +11,9 @@ function mn_widgets_views_default_views() {
   $view->name = 'mn_widgets_news';
   $view->description = '';
   $view->tag = 'mn';
-  $view->view_php = '';
   $view->base_table = 'feeds_data_syndication';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 6;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -39,8 +38,8 @@ function mn_widgets_views_default_views() {
       'required' => 0,
       'limit' => 1,
       'vids' => array(
-        '2' => 2,
-        '1' => 0,
+        2 => 2,
+        1 => 0,
       ),
       'id' => 'tid',
       'table' => 'data_taxonomy',
@@ -258,8 +257,8 @@ function mn_widgets_views_default_views() {
       'relationship' => 'feed_nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '3' => 0,
+        2 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Override',
@@ -276,8 +275,8 @@ function mn_widgets_views_default_views() {
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
       'validate_argument_vocabulary' => array(
-        '2' => 0,
-        '1' => 0,
+        2 => 0,
+        1 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,
@@ -309,8 +308,8 @@ function mn_widgets_views_default_views() {
       'relationship' => 'tid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '3' => 0,
+        2 => 0,
+        3 => 0,
       ),
       'default_options_div_prefix' => '',
       'default_argument_user' => 0,
@@ -324,8 +323,8 @@ function mn_widgets_views_default_views() {
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
       'validate_argument_vocabulary' => array(
-        '2' => 0,
-        '1' => 0,
+        2 => 0,
+        1 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,
@@ -677,8 +676,8 @@ function mn_widgets_views_default_views() {
       'relationship' => 'tid_2',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '3' => 0,
+        2 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Use default',
@@ -695,8 +694,8 @@ function mn_widgets_views_default_views() {
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
       'validate_argument_vocabulary' => array(
-        '2' => 0,
-        '1' => 0,
+        2 => 0,
+        1 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,

@@ -11,10 +11,9 @@ function mn_search_views_default_views() {
   $view->name = 'mn_search_saved';
   $view->description = 'Saved searches';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'stored_views';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 6;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(

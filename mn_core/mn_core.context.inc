@@ -5,6 +5,7 @@
  */
 function mn_core_context_default_contexts() {
   $export = array();
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -32,8 +33,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-dashboard'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -55,8 +56,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-display_mode-list'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -82,8 +83,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-display_mode-map'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -115,8 +116,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-display_mode-trash'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -155,8 +156,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-global-context'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -190,8 +191,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['mn-section-admin'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -245,8 +246,8 @@ function mn_core_context_default_contexts() {
     'menu' => 'feeds',
   );
   $context->condition_mode = 0;
-
   $export['mn-section-news'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -285,8 +286,8 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 1;
-
   $export['mn-section-news-notrash'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -323,8 +324,8 @@ function mn_core_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Dashboard');
-
   $export['spaces_dashboard-custom-1'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -350,7 +351,7 @@ function mn_core_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['theme-layout-wide'] = $context;
+
   return $export;
 }

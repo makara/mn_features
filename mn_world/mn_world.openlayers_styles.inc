@@ -5,6 +5,7 @@
  */
 function mn_world_openlayers_styles() {
   $export = array();
+
   $openlayers_styles = new stdClass;
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
@@ -19,8 +20,8 @@ function mn_world_openlayers_styles() {
     'strokeOpacity' => 0.35,
     'fillOpacity' => 0.75,
   );
-
   $export['mn_blue'] = $openlayers_styles;
+
   $openlayers_styles = new stdClass;
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
@@ -35,8 +36,8 @@ function mn_world_openlayers_styles() {
     'strokeOpacity' => 0.35,
     'fillOpacity' => 0.75,
   );
-
   $export['mn_green'] = $openlayers_styles;
+
   $openlayers_styles = new stdClass;
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
@@ -51,7 +52,7 @@ function mn_world_openlayers_styles() {
     'strokeOpacity' => 0.35,
     'fillOpacity' => 0.75,
   );
-
   $export['mn_red'] = $openlayers_styles;
+
   return $export;
 }

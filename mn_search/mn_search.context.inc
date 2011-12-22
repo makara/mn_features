@@ -5,6 +5,7 @@
  */
 function mn_search_context_default_contexts() {
   $export = array();
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -62,12 +63,8 @@ function mn_search_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
-  $translatables['mn-section-search'] = array(
-
-  );
-
   $export['mn-section-search'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -112,11 +109,7 @@ function mn_search_context_default_contexts() {
     ),
   );
   $context->condition_mode = 1;
-
-  $translatables['mn-section-search-notrash'] = array(
-
-  );
-
   $export['mn-section-search-notrash'] = $context;
+
   return $export;
 }

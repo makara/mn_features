@@ -5,6 +5,7 @@
  */
 function mn_world_openlayers_presets() {
   $export = array();
+
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
@@ -72,8 +73,8 @@ function mn_world_openlayers_presets() {
     ),
     'options' => NULL,
   );
-
   $export['mn'] = $openlayers_presets;
+
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
@@ -141,8 +142,8 @@ function mn_world_openlayers_presets() {
     ),
     'options' => NULL,
   );
-
   $export['mn_channels'] = $openlayers_presets;
+
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
@@ -214,8 +215,8 @@ function mn_world_openlayers_presets() {
     ),
     'options' => NULL,
   );
-
   $export['mn_fullscreen'] = $openlayers_presets;
+
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
@@ -287,7 +288,7 @@ function mn_world_openlayers_presets() {
     ),
     'options' => NULL,
   );
-
   $export['mn_fullscreen_channels'] = $openlayers_presets;
+
   return $export;
 }

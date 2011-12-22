@@ -5,6 +5,7 @@
  */
 function mn_channels_context_default_contexts() {
   $export = array();
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -65,8 +66,8 @@ function mn_channels_context_default_contexts() {
     'menu' => 'channels',
   );
   $context->condition_mode = 0;
-
   $export['mn-section-channels'] = $context;
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -105,7 +106,7 @@ function mn_channels_context_default_contexts() {
     ),
   );
   $context->condition_mode = 1;
-
   $export['mn-section-channels-notrash'] = $context;
+
   return $export;
 }

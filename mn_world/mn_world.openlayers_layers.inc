@@ -5,6 +5,7 @@
  */
 function mn_world_openlayers_layers() {
   $export = array();
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -66,8 +67,8 @@ function mn_world_openlayers_layers() {
     'events' => array(),
     'callback' => 'mn_core_process_layers',
   );
-
   $export['world_dark'] = $openlayers_layers;
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -92,8 +93,8 @@ function mn_world_openlayers_layers() {
       0 => '900913',
     ),
   );
-
   $export['world_glass'] = $openlayers_layers;
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -120,8 +121,8 @@ function mn_world_openlayers_layers() {
       0 => '900913',
     ),
   );
-
   $export['world_glass_small'] = $openlayers_layers;
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -183,8 +184,8 @@ function mn_world_openlayers_layers() {
     'events' => array(),
     'callback' => 'mn_core_process_layers',
   );
-
   $export['world_light'] = $openlayers_layers;
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -248,8 +249,8 @@ function mn_world_openlayers_layers() {
     'events' => array(),
     'callback' => 'mn_core_process_layers',
   );
-
   $export['world_light_small'] = $openlayers_layers;
+
   $openlayers_layers = new stdClass;
   $openlayers_layers->disabled = FALSE; /* Edit this to true to make a default openlayers_layers disabled initially */
   $openlayers_layers->api_version = 1;
@@ -277,7 +278,7 @@ function mn_world_openlayers_layers() {
       0 => '900913',
     ),
   );
-
   $export['world_print'] = $openlayers_layers;
+
   return $export;
 }

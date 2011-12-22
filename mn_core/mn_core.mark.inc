@@ -5,6 +5,7 @@
  */
 function mn_core_mark_default_marks() {
   $export = array();
+
   $mark = new stdClass;
   $mark->disabled = FALSE; /* Edit this to true to make a default mark disabled initially */
   $mark->api_version = 1;
@@ -18,7 +19,7 @@ function mn_core_mark_default_marks() {
     'unmark_confirm_text' => 'Restored',
     'global' => 1,
   );
-
   $export['trash'] = $mark;
+
   return $export;
 }
